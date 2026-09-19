@@ -1,0 +1,6 @@
+---
+title: "About"
+author: "Emma Caetano"
+---
+
+This project was created by Emma Caetano to explore and visualize Wins Above Replacement (WAR) metrics for NCAA Division I college softball.
