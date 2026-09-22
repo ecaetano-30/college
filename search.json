@@ -2,23 +2,16 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "College Softball WAR",
+    "title": "College softball",
     "section": "",
-    "text": "Nobody publishes WAR for college softball, so we built it from the ground up instead of borrowing baseball’s constants. The batting side starts from wOBA using run values fit on this season’s own play-by-play, applies an opponent adjustment shrunk to game-level calibration, and expresses the result as wRC+, where 100 is league average and every point is one percent better.\nThe pitching side rests on a softball-native FIP: a log-linear model fit per inning on 1,051 official pitcher seasons, weighing home runs at +1.58, walks and hit batters at +0.73, and strikeouts at -0.69 per inning. Fitting on softball data matters because the sport’s run environment is not baseball’s: top strikeout rates reach 49 percent and the league allows 5.84 runs per seven innings.\nRuns convert to wins at 10.48 runs per win, derived from Pythagenpat rather than a cross-team regression, which schedule strength badly confounds. Replacement level is a .250 team. Two honest gaps: WAR here has no fielding or baserunning component, because the public play-by-play names the position that fielded each ball but never the player. Treat it as offense plus pitching, which is most of the game but not all of it.\nThis dataset is free to use under CC BY 4.0: use it anywhere, including commercially, with attribution to Pioneer Pennant."
+    "text": "Batting WAR vs. Pitching WAR\n\n\n\n\n\n\nSoftball hitting WAR (Wins Above Replacement) is an advanced sabermetric statistic that estimates how many more wins a specific batter contributes to their team compared to a free, readily available “replacement-level” player. It goes beyond simple metrics like batting average or home runs by looking at a player’s complete batting contribution (using measures like weighted on-base average or linear weights). Softball pitching WAR is an advanced sabermetric statistic that estimates the number of wins a pitcher adds to her team compared to a hypothetical “replacement-level” pitcher (a readily available backup or average reserve player)."
   },
   {
-    "objectID": "index.html#leaderboard",
-    "href": "index.html#leaderboard",
-    "title": "College Softball WAR",
-    "section": "Leaderboard",
-    "text": "Leaderboard"
-  },
-  {
-    "objectID": "index.html#interactive-visualizations",
-    "href": "index.html#interactive-visualizations",
-    "title": "College Softball WAR",
-    "section": "Interactive Visualizations",
-    "text": "Interactive Visualizations\n\nTop 15 Teams by Total WAR\n\n\n\n\n\n\n\n\nBatting WAR vs. Pitching WAR"
+    "objectID": "explore.html",
+    "href": "explore.html",
+    "title": "Exploration",
+    "section": "",
+    "text": "Batting average and batting WAR are related, but they do not measure the exact same thing. Batting average tells us how often a hitter gets a hit, while batting WAR captures a broader picture of how much a player contributes to run creation and overall team success. In general, players with higher batting averages often have stronger offensive production, but a player can still produce a high batting WAR by drawing walks, hitting for power, or creating runs in ways that do not always show up in a simple average.\nERA and pitching WAR are also related but not identical. ERA measures the average number of earned runs a pitcher allows per seven innings, so it focuses on run prevention in a very direct way. Pitching WAR, by contrast, estimates the total number of wins a pitcher adds above a replacement-level pitcher across all aspects of performance, including how often they miss bats, limit baserunners, and help their team win games.\n\nSearch for a team \n\n\nOr choose a team  Select a team \n\n\n\nType a team name or choose one from the list to see its WAR and batting average."
   },
   {
     "objectID": "about.html",
@@ -33,5 +26,12 @@
     "title": "Story",
     "section": "",
     "text": "Once upon a time, there was an 8-year-old girl who picked up a bat and was handed a softball. Every day, she went out to the field and practiced with her teammates. She was always working hard and preparing for the games to be played. She always wanted to hit homeruns like the girls she saw on TV. Then one day she realized years of hard work have paid off and passed, and she got the opportunity to play softball in college. She started to research the on-base plus slugging for NCAA softball players and saw that in 2021 there was an average of 3.61 homeruns per player, but in 2022 homeruns became more frequent with 4.06 homeruns. Since this has been her dream since a little girl, she knew she needed to study the data to see how to be the best hitter. She watched swings from 2022 since the OPS was higher and began to analyze and study NCAA softball players swings. Because of this being her overall goal, she packed her bags and moved to Sarasota, with nothing but a bat and glove, leaving everything she knew behind. She was scared and hesitant. Until finally, she moved into her dorm and met the best roommates of all time. She shared how the OPS went up in 2022 and showed them the game film and the OPS percentage contributed to how they play now. They do everything together, play softball together, love each other dearly, and it all ended happily ever after."
+  },
+  {
+    "objectID": "leaderboard.html",
+    "href": "leaderboard.html",
+    "title": "Leaderboard",
+    "section": "",
+    "text": "Softball hitting WAR (Wins Above Replacement) is an advanced sabermetric statistic that estimates how many more wins a specific batter contributes to their team compared to a free, readily available “replacement-level” player. It goes beyond simple metrics like batting average or home runs by looking at a player’s complete batting contribution (using measures like weighted on-base average or linear weights). Softball pitching WAR is an advanced sabermetric statistic that estimates the number of wins a pitcher adds to her team compared to a hypothetical “replacement-level” pitcher (a readily available backup or average reserve player)."
   }
 ]

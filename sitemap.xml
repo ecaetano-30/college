@@ -2,7 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://ecaetano-30.github.io/college/index.html</loc>
-    <lastmod>2026-09-21T20:50:02.617Z</lastmod>
+    <lastmod>2026-09-22T00:09:32.845Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ecaetano-30.github.io/college/explore.html</loc>
+    <lastmod>2026-09-22T00:30:44.144Z</lastmod>
   </url>
   <url>
     <loc>https://ecaetano-30.github.io/college/about.html</loc>
@@ -11,5 +15,9 @@
   <url>
     <loc>https://ecaetano-30.github.io/college/story.html</loc>
     <lastmod>2026-09-21T20:50:02.617Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ecaetano-30.github.io/college/leaderboard.html</loc>
+    <lastmod>2026-09-22T00:11:26.761Z</lastmod>
   </url>
 </urlset>
