@@ -1,0 +1,44 @@
+---
+title: "Leaderboard"
+author: "Emma Caetano"
+---
+
+Softball hitting WAR (Wins Above Replacement) is an advanced sabermetric statistic that estimates how many more wins a specific batter contributes to their team compared to a free, readily available "replacement-level" player. It goes beyond simple metrics like batting average or home runs by looking at a player's complete batting contribution (using measures like weighted on-base average or linear weights). Softball pitching WAR is an advanced sabermetric statistic that estimates the number of wins a pitcher adds to her team compared to a hypothetical "replacement-level" pitcher (a readily available backup or average reserve player).
+
+```{r}
+#| label: setup
+#| include: false
+
+library(tidyverse)
+library(reactable)
+
+war_data <- read_csv("pennant-war-2026.csv", show_col_types = FALSE)
+```
+
+```{r}
+#| label: war-table
+#| echo: false
+
+war_data |>
+  select(
+    Rank = war_rank,
+    Team = team,
+    Conference = conference,
+    `Batting WAR` = war_bat,
+    `Pitching WAR` = war_pit,
+    `Total WAR` = war_total
+  ) |>
+  reactable(
+    searchable = TRUE,
+    filterable = TRUE,
+    striped = TRUE,
+    defaultPageSize = 10,
+    columns = list(
+      Team = colDef(filterable = TRUE),
+      Conference = colDef(filterable = TRUE),
+      `Batting WAR` = colDef(format = colFormat(digits = 2)),
+      `Pitching WAR` = colDef(format = colFormat(digits = 2)),
+      `Total WAR` = colDef(format = colFormat(digits = 2))
+    )
+  )
+```

@@ -1,0 +1,231 @@
+---
+title: "Exploration"
+author: "Emma Caetano"
+---
+
+```{r}
+#| echo: false
+#| include: false
+
+library(tidyverse)
+library(jsonlite)
+library(rvest)
+
+war_data <- read_csv("pennant-war-2026.csv", show_col_types = FALSE)
+
+team_ba_pages <- paste0(
+  "https://www.ncaa.com/stats/softball/d1/current/team/281",
+  c("", "/p2", "/p3", "/p4", "/p5", "/p6", "/p7")
+)
+
+team_ba <- map_dfr(team_ba_pages, function(page_url) {
+  page <- read_html(page_url)
+  table <- page %>% html_node("table") %>% html_table(fill = TRUE)
+
+  if (is.null(table)) return(tibble())
+
+  table %>%
+    as_tibble() %>%
+    select(Team = 2, BA = 5) %>%
+    filter(!str_detect(Team, "Team"), !is.na(Team)) %>%
+    mutate(
+      Team = str_replace(Team, "\\s+", " ") %>% str_trim(),
+      BA = as.numeric(str_replace(BA, "^\\.", "0.")) / 1000
+    )
+}) %>%
+  distinct() %>%
+  arrange(desc(BA)) %>%
+  rename(team = Team, ba = BA)
+
+team_era_pages <- paste0(
+  "https://www.ncaa.com/stats/softball/d1/current/team/282",
+  c("", "/p2", "/p3", "/p4", "/p5", "/p6", "/p7")
+)
+
+team_era <- map_dfr(team_era_pages, function(page_url) {
+  page <- read_html(page_url)
+  table <- page %>% html_node("table") %>% html_table(fill = TRUE)
+
+  if (is.null(table)) return(tibble())
+
+  table %>%
+    as_tibble() %>%
+    select(Team = 2, ER = 6) %>%
+    filter(!str_detect(Team, "Team"), !is.na(Team)) %>%
+    mutate(
+      Team = str_replace(Team, "\\s+", " ") %>% str_trim(),
+      ER = as.numeric(ER)
+    )
+}) %>%
+  distinct() %>%
+  arrange(desc(ER)) %>%
+  rename(team = Team, earned_runs = ER)
+
+war_data <- war_data %>%
+  left_join(team_ba, by = "team") %>%
+  left_join(team_era, by = "team")
+
+team_json <- jsonlite::toJSON(war_data, auto_unbox = TRUE)
+```
+
+Batting average and batting WAR are related, but they do not measure the exact same thing. Batting average tells us how often a hitter gets a hit, while batting WAR captures a broader picture of how much a player contributes to run creation and overall team success. In general, players with higher batting averages often have stronger offensive production, but a player can still produce a high batting WAR by drawing walks, hitting for power, or creating runs in ways that do not always show up in a simple average.
+
+ERA and pitching WAR are also related but not identical. ERA measures the average number of earned runs a pitcher allows per seven innings, so it focuses on run prevention in a very direct way. Pitching WAR, by contrast, estimates the total number of wins a pitcher adds above a replacement-level pitcher across all aspects of performance, including how often they miss bats, limit baserunners, and help their team win games.
+
+<div class="team-search-box">
+  <label for="team-search">Search for a team</label>
+  <input id="team-search" type="text" placeholder="Type a team name..." />
+</div>
+
+<div class="team-search-box">
+  <label for="team-select">Or choose a team</label>
+  <select id="team-select">
+    <option value="">Select a team</option>
+  </select>
+</div>
+
+<div id="team-result" class="team-result">
+  <p>Type a team name or choose one from the list to see its WAR and batting average.</p>
+</div>
+
+<script>
+  const teamData = `r team_json`;
+
+  const teamInput = document.getElementById("team-search");
+  const teamSelect = document.getElementById("team-select");
+  const teamResult = document.getElementById("team-result");
+
+  teamData.forEach(team => {
+    const option = document.createElement("option");
+    option.value = team.team;
+    option.textContent = team.team;
+    teamSelect.appendChild(option);
+  });
+
+  function buildTeamLogoUrl(teamName) {
+    const slug = teamName
+      .toLowerCase()
+      .replace(/&/g, "and")
+      .replace(/\./g, "")
+      .replace(/[()]/g, "")
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/^-+|-+$/g, "");
+
+    return `https://www.ncaa.com/sites/default/files/images/logos/schools/bgl/${slug}.svg`;
+  }
+
+  function renderTeam(team) {
+    if (!team) {
+      teamResult.innerHTML = "<p>Type a team name or choose one from the list to see its WAR and batting average.</p>";
+      return;
+    }
+
+    const battingAverage = team.ba != null ? Number(team.ba).toFixed(3) : "N/A";
+    const earnedRuns = team.earned_runs != null ? Number(team.earned_runs).toFixed(0) : "N/A";
+    const logoUrl = buildTeamLogoUrl(team.team);
+
+    teamResult.innerHTML = `
+      <div class="team-card-header">
+        <img src="${logoUrl}" alt="${team.team} logo" class="team-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';" />
+        <span class="team-logo-fallback" style="display:none;">${team.team}</span>
+        <h3>${team.team}</h3>
+      </div>
+      <p><strong>Conference:</strong> ${team.conference}</p>
+      <p><strong>WAR Total:</strong> ${Number(team.war_total).toFixed(2)}</p>
+      <p><strong>Batting WAR:</strong> ${Number(team.war_bat).toFixed(2)}</p>
+      <p><strong>Pitching WAR:</strong> ${Number(team.war_pit).toFixed(2)}</p>
+      <p><strong>Batting Average:</strong> ${battingAverage}</p>
+      <p><strong>Earned Runs:</strong> ${earnedRuns}</p>
+    `;
+  }
+
+  function findTeam(query) {
+    const normalized = query.trim().toLowerCase();
+    if (!normalized) return null;
+
+    return teamData.find(team =>
+      team.team.toLowerCase().includes(normalized)
+    ) || null;
+  }
+
+  teamInput.addEventListener("input", function () {
+    const match = findTeam(this.value);
+    if (match) {
+      teamSelect.value = match.team;
+    } else {
+      teamSelect.value = "";
+    }
+    renderTeam(match);
+  });
+
+  teamSelect.addEventListener("change", function () {
+    const selected = this.value;
+    if (!selected) {
+      teamInput.value = "";
+      renderTeam(null);
+      return;
+    }
+
+    const match = teamData.find(team => team.team === selected);
+    teamInput.value = selected;
+    renderTeam(match);
+  });
+</script>
+
+<style>
+  .team-search-box {
+    margin: 1.5rem 0 1rem 0;
+    max-width: 500px;
+  }
+
+  .team-search-box label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.35rem;
+  }
+
+  .team-search-box input,
+  .team-search-box select {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #d0d7de;
+    border-radius: 0.5rem;
+    background: white;
+  }
+
+  .team-result {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.75rem;
+    padding: 1rem 1.25rem;
+    margin-top: 1rem;
+  }
+
+  .team-result h3 {
+    margin-top: 0;
+  }
+
+  .team-card-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .team-logo {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    flex-shrink: 0;
+    background: white;
+    border-radius: 0.5rem;
+    padding: 0.2rem;
+  }
+
+  .team-logo-fallback {
+    display: none;
+    font-weight: 600;
+    color: #1f2937;
+  }
+</style>

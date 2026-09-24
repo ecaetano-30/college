@@ -7,6 +7,12 @@ website:
     left:
       - href: index.qmd
         text: Home
+      - href: background.qmd
+        text: Background
+      - href: leaderboard.qmd
+        text: Leaderboard
+      - href: explore.qmd
+        text: Exploration
       - href: story.qmd
         text: Story
       - about.qmd
