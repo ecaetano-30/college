@@ -32,7 +32,21 @@
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "This project was created by Emma Caetano to explore and visualize Wins Above Replacement (WAR) metrics for NCAA Division I college softball."
+    "text": "My name is Emma Caetano. I can be reached at ecaetano30@ncf.edu. My GitHub account is ecaetano-30, and my final project repository is college-softball-WAR. I am a student at New College of Florida."
+  },
+  {
+    "objectID": "about.html#contact",
+    "href": "about.html#contact",
+    "title": "About",
+    "section": "",
+    "text": "My name is Emma Caetano. I can be reached at ecaetano30@ncf.edu. My GitHub account is ecaetano-30, and my final project repository is college-softball-WAR. I am a student at New College of Florida."
+  },
+  {
+    "objectID": "about.html#data-source",
+    "href": "about.html#data-source",
+    "title": "About",
+    "section": "Data source",
+    "text": "Data source\nThis project uses the 2026 college softball WAR dataset stored in the repository as pennant-war-2026.csv, which provides team-level batting and pitching WAR values for NCAA Division I programs. The analysis compares offensive and pitching contributions across teams and conferences, and the project’s visualizations are built directly from this data file. More details and the full project are available in the college-softball-WAR GitHub repository."
   },
   {
     "objectID": "story.html",
