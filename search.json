@@ -1,31 +1,31 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "College softball",
+    "objectID": "latest-in-recruiting.html",
+    "href": "latest-in-recruiting.html",
+    "title": "Latest in Recruiting",
     "section": "",
-    "text": "Batting WAR vs. Pitching WAR\n\n\n\n\n\n\nSoftball hitting WAR (Wins Above Replacement) is an advanced sabermetric statistic that estimates how many more wins a specific batter contributes to their team compared to a free, readily available “replacement-level” player. It goes beyond simple metrics like batting average or home runs by looking at a player’s complete batting contribution (using measures like weighted on-base average or linear weights). Softball pitching WAR is an advanced sabermetric statistic that estimates the number of wins a pitcher adds to her team compared to a hypothetical “replacement-level” pitcher (a readily available backup or average reserve player)."
+    "text": "When comparing UCLA and Mississippi State through the lens of WAR, the biggest difference is not simply how many top recruits each program brings in, but how that talent translates into run production versus pitching value. UCLA tends to recruit players who create major offensive upside, giving the program a larger emphasis on batting WAR and the ability to generate runs through power, contact, and on-base skills. Mississippi State, by contrast, often combines its recruiting profile with a strong pitching-development pipeline, which can elevate pitching WAR by turning raw talent into effective mound production.\n\n\n\n\n\n\n\n\nCategory\nUCLA\nMississippi State\n\n\n\n\nBatting WAR outlook\nStrong offensive talent base and run-creation potential\nMore balanced profile, with recruiting aimed at both offense and pitching support\n\n\nPitching WAR outlook\nCan be elite when top arms develop, but often balanced by offensive firepower\nFrequently benefits from strong pitching development and roster depth\n\n\nRecruiting emphasis\nOffensive impact and high-end hitting talent\nPitching development, roster balance, and strategic talent acquisition\n\n\nOverall program identity\nPower and run production often drive the roster\nPitching and team balance often define the roster ceiling\n\n\n\nIn a WAR framework, UCLA often looks like a program built around maximizing batting WAR through elite talent at the plate, while Mississippi State may be more dependent on translating recruiting into pitching WAR and overall team balance. That contrast helps explain why the two programs can both be competitive even when their recruiting story and WAR profile are not shaped in the same way."
   },
   {
-    "objectID": "explore.html",
-    "href": "explore.html",
-    "title": "Exploration",
+    "objectID": "latest-in-recruiting.html#ucla-vs.-mississippi-state",
+    "href": "latest-in-recruiting.html#ucla-vs.-mississippi-state",
+    "title": "Latest in Recruiting",
     "section": "",
-    "text": "Batting average and batting WAR are related, but they do not measure the exact same thing. Batting average tells us how often a hitter gets a hit, while batting WAR captures a broader picture of how much a player contributes to run creation and overall team success. In general, players with higher batting averages often have stronger offensive production, but a player can still produce a high batting WAR by drawing walks, hitting for power, or creating runs in ways that do not always show up in a simple average.\nERA and pitching WAR are also related but not identical. ERA measures the average number of earned runs a pitcher allows per seven innings, so it focuses on run prevention in a very direct way. Pitching WAR, by contrast, estimates the total number of wins a pitcher adds above a replacement-level pitcher across all aspects of performance, including how often they miss bats, limit baserunners, and help their team win games.\n\nSearch for a team \n\n\nOr choose a team  Select a team \n\n\n\nType a team name or choose one from the list to see its WAR and batting average."
+    "text": "When comparing UCLA and Mississippi State through the lens of WAR, the biggest difference is not simply how many top recruits each program brings in, but how that talent translates into run production versus pitching value. UCLA tends to recruit players who create major offensive upside, giving the program a larger emphasis on batting WAR and the ability to generate runs through power, contact, and on-base skills. Mississippi State, by contrast, often combines its recruiting profile with a strong pitching-development pipeline, which can elevate pitching WAR by turning raw talent into effective mound production.\n\n\n\n\n\n\n\n\nCategory\nUCLA\nMississippi State\n\n\n\n\nBatting WAR outlook\nStrong offensive talent base and run-creation potential\nMore balanced profile, with recruiting aimed at both offense and pitching support\n\n\nPitching WAR outlook\nCan be elite when top arms develop, but often balanced by offensive firepower\nFrequently benefits from strong pitching development and roster depth\n\n\nRecruiting emphasis\nOffensive impact and high-end hitting talent\nPitching development, roster balance, and strategic talent acquisition\n\n\nOverall program identity\nPower and run production often drive the roster\nPitching and team balance often define the roster ceiling\n\n\n\nIn a WAR framework, UCLA often looks like a program built around maximizing batting WAR through elite talent at the plate, while Mississippi State may be more dependent on translating recruiting into pitching WAR and overall team balance. That contrast helps explain why the two programs can both be competitive even when their recruiting story and WAR profile are not shaped in the same way."
   },
   {
-    "objectID": "top10.html",
-    "href": "top10.html",
-    "title": "Top 10",
+    "objectID": "leaderboard.html",
+    "href": "leaderboard.html",
+    "title": "Leaderboard",
     "section": "",
-    "text": "Top 10 individual players by oWAR"
+    "text": "This leaderboard follows the same offensive and pitching framework used in the public college softball WAR model: a team’s value is broken into batting contribution, pitching contribution, and total wins above replacement. The page below adds more context than a raw table by surfacing the strongest teams, the biggest production gaps, and the same advanced WAR components visible in the underlying model.\n\n\n\n\n\n\nThe strongest teams on this page combine dependable offense with dependable production on the mound. In the model, those totals are built from the same run-value framework used to estimate linear weights, then translated into a standardized WAR scale so the leaderboard can be compared across teams and conferences."
   },
   {
-    "objectID": "background.html",
-    "href": "background.html",
-    "title": "Background",
+    "objectID": "story.html",
+    "href": "story.html",
+    "title": "Story",
     "section": "",
-    "text": "College softball is a fast-paced, highly competitive sport played at the NCAA level, where teams rely on pitching, defense, and timely hitting to win. Players often build their skills through travel ball, training, and recruiting, and every game can turn on small details like pitch selection, contact quality, and fielding execution. The sport blends athleticism with strategy, making it a strong topic for analyzing player performance and team success."
+    "text": "Once upon a time, there was an 8-year-old girl who picked up a bat and was handed a softball. Every day, she went out to the field and practiced with her teammates. She was always working hard and preparing for the games to be played. She always wanted to hit homeruns like the girls she saw on TV. Then one day she realized years of hard work have paid off and passed, and she got the opportunity to play softball in college. She started to research the on-base plus slugging for NCAA softball players and saw that in 2021 there was an average of 3.61 homeruns per player, but in 2022 homeruns became more frequent with 4.06 homeruns. Since this has been her dream since a little girl, she knew she needed to study the data to see how to be the best hitter. She watched swings from 2022 since the OPS was higher and began to analyze and study NCAA softball players swings. Because of this being her overall goal, she packed her bags and moved to Sarasota, with nothing but a bat and glove, leaving everything she knew behind. She was scared and hesitant. Until finally, she moved into her dorm and met the best roommates of all time. She shared how the OPS went up in 2022 and showed them the game film and the OPS percentage contributed to how they play now. They do everything together, play softball together, love each other dearly, and it all ended happily ever after."
   },
   {
     "objectID": "about.html",
@@ -49,17 +49,31 @@
     "text": "Data source\nThis project uses the 2026 college softball WAR dataset stored in the repository as pennant-war-2026.csv, which provides team-level batting and pitching WAR values for NCAA Division I programs. The analysis compares offensive and pitching contributions across teams and conferences, and the project’s visualizations are built directly from this data file. More details and the full project are available in the college-softball-WAR GitHub repository."
   },
   {
-    "objectID": "story.html",
-    "href": "story.html",
-    "title": "Story",
+    "objectID": "background.html",
+    "href": "background.html",
+    "title": "Background",
     "section": "",
-    "text": "Once upon a time, there was an 8-year-old girl who picked up a bat and was handed a softball. Every day, she went out to the field and practiced with her teammates. She was always working hard and preparing for the games to be played. She always wanted to hit homeruns like the girls she saw on TV. Then one day she realized years of hard work have paid off and passed, and she got the opportunity to play softball in college. She started to research the on-base plus slugging for NCAA softball players and saw that in 2021 there was an average of 3.61 homeruns per player, but in 2022 homeruns became more frequent with 4.06 homeruns. Since this has been her dream since a little girl, she knew she needed to study the data to see how to be the best hitter. She watched swings from 2022 since the OPS was higher and began to analyze and study NCAA softball players swings. Because of this being her overall goal, she packed her bags and moved to Sarasota, with nothing but a bat and glove, leaving everything she knew behind. She was scared and hesitant. Until finally, she moved into her dorm and met the best roommates of all time. She shared how the OPS went up in 2022 and showed them the game film and the OPS percentage contributed to how they play now. They do everything together, play softball together, love each other dearly, and it all ended happily ever after."
+    "text": "College softball is a fast-paced, highly competitive sport played at the NCAA level, where teams rely on pitching, defense, and timely hitting to win. Players often build their skills through travel ball, training, and recruiting, and every game can turn on small details like pitch selection, contact quality, and fielding execution. The sport blends athleticism with strategy, making it a strong topic for analyzing player performance and team success."
   },
   {
-    "objectID": "leaderboard.html",
-    "href": "leaderboard.html",
-    "title": "Leaderboard",
+    "objectID": "top10.html",
+    "href": "top10.html",
+    "title": "Top 10",
     "section": "",
-    "text": "This leaderboard follows the same offensive and pitching framework used in the public college softball WAR model: a team’s value is broken into batting contribution, pitching contribution, and total wins above replacement. The page below adds more context than a raw table by surfacing the strongest teams, the biggest production gaps, and the same advanced WAR components visible in the underlying model.\n\n\n\n\n\n\nThe strongest teams on this page combine dependable offense with dependable production on the mound. In the model, those totals are built from the same run-value framework used to estimate linear weights, then translated into a standardized WAR scale so the leaderboard can be compared across teams and conferences."
+    "text": "Top 10 individual players by oWAR\nClick on the athletes name to learn more."
+  },
+  {
+    "objectID": "explore.html",
+    "href": "explore.html",
+    "title": "Exploration",
+    "section": "",
+    "text": "Batting average and batting WAR are related, but they do not measure the exact same thing. Batting average tells us how often a hitter gets a hit, while batting WAR captures a broader picture of how much a player contributes to run creation and overall team success. In general, players with higher batting averages often have stronger offensive production, but a player can still produce a high batting WAR by drawing walks, hitting for power, or creating runs in ways that do not always show up in a simple average.\nERA and pitching WAR are also related but not identical. ERA measures the average number of earned runs a pitcher allows per seven innings, so it focuses on run prevention in a very direct way. Pitching WAR, by contrast, estimates the total number of wins a pitcher adds above a replacement-level pitcher across all aspects of performance, including how often they miss bats, limit baserunners, and help their team win games.\n\nSearch for a team \n\n\nOr choose a team  Select a team \n\n\n\nType a team name or choose one from the list to see its WAR and batting average."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "College softball",
+    "section": "",
+    "text": "Batting WAR vs. Pitching WAR\n\n\n\n\n\n\nSoftball hitting WAR (Wins Above Replacement) is an advanced sabermetric statistic that estimates how many more wins a specific batter contributes to their team compared to a free, readily available “replacement-level” player. It goes beyond simple metrics like batting average or home runs by looking at a player’s complete batting contribution (using measures like weighted on-base average or linear weights). Softball pitching WAR is an advanced sabermetric statistic that estimates the number of wins a pitcher adds to her team compared to a hypothetical “replacement-level” pitcher (a readily available backup or average reserve player)."
   }
 ]

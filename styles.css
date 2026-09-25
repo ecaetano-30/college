@@ -98,6 +98,59 @@ h1, h2, h3,
   overflow: hidden;
 }
 
+.player-hover-card {
+  position: relative;
+  display: inline-block;
+}
+
+.player-link {
+  color: var(--softball-navy-800);
+  text-decoration: underline;
+  text-decoration-color: rgba(79, 123, 177, 0.45);
+  font-weight: 700;
+}
+
+.player-tooltip {
+  position: absolute;
+  left: 0;
+  top: calc(100% + 10px);
+  z-index: 20;
+  width: 220px;
+  background: rgba(255, 255, 255, 0.99);
+  border: 1px solid rgba(17, 45, 77, 0.12);
+  border-radius: 12px;
+  box-shadow: 0 16px 32px rgba(17, 45, 77, 0.18);
+  padding: 0.6rem;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(8px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.player-hover-card:hover .player-tooltip,
+.player-hover-card:focus-within .player-tooltip {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.player-tooltip img {
+  width: 100%;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+
+.player-tooltip-name {
+  font-weight: 700;
+  color: var(--softball-navy-800);
+  margin-bottom: 0.25rem;
+}
+
+.rt-td {
+  overflow: visible !important;
+}
+
 thead {
   background: linear-gradient(90deg, var(--softball-red-100), var(--softball-navy-200));
 }
