@@ -8,7 +8,7 @@
 
 <meta name="author" content="Emma Caetano">
 
-<title>About – College Softball WAR</title>
+<title>Top 10 – College Softball WAR</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -74,6 +74,14 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script src="site_libs/core-js-2.5.3/shim.min.js"></script>
+<script src="site_libs/react-18.2.0/react.min.js"></script>
+<script src="site_libs/react-18.2.0/react-dom.min.js"></script>
+<script src="site_libs/reactwidget-2.0.0/react-tools.js"></script>
+<link href="site_libs/htmltools-fill-0.5.9/fill.css" rel="stylesheet">
+<script src="site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+<link href="site_libs/reactable-0.4.5/reactable.css" rel="stylesheet">
+<script src="site_libs/reactable-binding-0.4.5/reactable.js"></script>
 
 
 <link rel="stylesheet" href="styles.css">
@@ -109,7 +117,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Leaderboard</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./top10.html"> 
+    <a class="nav-link active" href="./top10.html" aria-current="page"> 
 <span class="menu-text">Top 10</span></a>
   </li>  
   <li class="nav-item">
@@ -121,7 +129,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Story</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./about.html" aria-current="page"> 
+    <a class="nav-link" href="./about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
 </ul>
@@ -135,15 +143,21 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#top-10-individual-players-by-owar" id="toc-top-10-individual-players-by-owar" class="nav-link active" data-scroll-target="#top-10-individual-players-by-owar">Top 10 individual players by oWAR</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">About</h1>
+<h1 class="title">Top 10</h1>
 </div>
 
 
@@ -166,9 +180,17 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>This project was created by Emma Caetano to explore and visualize Wins Above Replacement (WAR) metrics for NCAA Division I college softball.</p>
+<section id="top-10-individual-players-by-owar" class="level3">
+<h3 class="anchored" data-anchor-id="top-10-individual-players-by-owar">Top 10 individual players by oWAR</h3>
+<div class="cell">
+<div class="cell-output-display">
+<div class="reactable html-widget html-fill-item" id="htmlwidget-b051ebddd4cb4d858f55" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-b051ebddd4cb4d858f55">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"Rank":[1,2,3,4,5,6,7,8,9,10],"Player":["Jordan Woolery","Megan Grant","Kendall Wells","Aglaia Rudd","Hannah Di Genova","Courtney Poulich","Isa Torres","Emily LeGette","Kylie Doherty","Mia Williams"],"Team":["UCLA","UCLA","Oklahoma","Robert Morris","Nevada","Robert Morris","Florida State","North Carolina","Boston U","Texas Tech"],"oWAR":[2.4,2.29,1.98,1.93,1.85,1.79,1.75,1.72,1.72,1.69]},"columns":[{"id":"Rank","name":"Rank","type":"numeric","width":70},{"id":"Player","name":"Player","type":"character","filterable":true,"style":{"fontWeight":600}},{"id":"Team","name":"Team","type":"character","filterable":true},{"id":"oWAR","name":"oWAR","type":"numeric","format":{"cell":{"digits":2},"aggregated":{"digits":2}}}],"filterable":true,"defaultPageSize":10,"striped":true,"dataKey":"07aef1a6e5a73a2a31beee0aabe65266"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

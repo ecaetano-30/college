@@ -14,11 +14,11 @@
     "text": "Batting average and batting WAR are related, but they do not measure the exact same thing. Batting average tells us how often a hitter gets a hit, while batting WAR captures a broader picture of how much a player contributes to run creation and overall team success. In general, players with higher batting averages often have stronger offensive production, but a player can still produce a high batting WAR by drawing walks, hitting for power, or creating runs in ways that do not always show up in a simple average.\nERA and pitching WAR are also related but not identical. ERA measures the average number of earned runs a pitcher allows per seven innings, so it focuses on run prevention in a very direct way. Pitching WAR, by contrast, estimates the total number of wins a pitcher adds above a replacement-level pitcher across all aspects of performance, including how often they miss bats, limit baserunners, and help their team win games.\n\nSearch for a team \n\n\nOr choose a team  Select a team \n\n\n\nType a team name or choose one from the list to see its WAR and batting average."
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "top10.html",
+    "href": "top10.html",
+    "title": "Top 10",
     "section": "",
-    "text": "This project was created by Emma Caetano to explore and visualize Wins Above Replacement (WAR) metrics for NCAA Division I college softball."
+    "text": "Top 10 individual players by oWAR"
   },
   {
     "objectID": "background.html",
@@ -26,6 +26,13 @@
     "title": "Background",
     "section": "",
     "text": "College softball is a fast-paced, highly competitive sport played at the NCAA level, where teams rely on pitching, defense, and timely hitting to win. Players often build their skills through travel ball, training, and recruiting, and every game can turn on small details like pitch selection, contact quality, and fielding execution. The sport blends athleticism with strategy, making it a strong topic for analyzing player performance and team success."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "This project was created by Emma Caetano to explore and visualize Wins Above Replacement (WAR) metrics for NCAA Division I college softball."
   },
   {
     "objectID": "story.html",
@@ -39,6 +46,6 @@
     "href": "leaderboard.html",
     "title": "Leaderboard",
     "section": "",
-    "text": "Softball hitting WAR (Wins Above Replacement) is an advanced sabermetric statistic that estimates how many more wins a specific batter contributes to their team compared to a free, readily available “replacement-level” player. It goes beyond simple metrics like batting average or home runs by looking at a player’s complete batting contribution (using measures like weighted on-base average or linear weights). Softball pitching WAR is an advanced sabermetric statistic that estimates the number of wins a pitcher adds to her team compared to a hypothetical “replacement-level” pitcher (a readily available backup or average reserve player)."
+    "text": "This leaderboard follows the same offensive and pitching framework used in the public college softball WAR model: a team’s value is broken into batting contribution, pitching contribution, and total wins above replacement. The page below adds more context than a raw table by surfacing the strongest teams, the biggest production gaps, and the same advanced WAR components visible in the underlying model.\n\n\n\n\n\n\nThe strongest teams on this page combine dependable offense with dependable production on the mound. In the model, those totals are built from the same run-value framework used to estimate linear weights, then translated into a standardized WAR scale so the leaderboard can be compared across teams and conferences."
   }
 ]

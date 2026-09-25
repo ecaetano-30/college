@@ -1,1 +1,136 @@
-/* css styles */
+:root {
+  --softball-red-50: #fff5f7;
+  --softball-red-100: #ffe2ea;
+  --softball-red-300: #f7b5c9;
+  --softball-red-500: #dd5d82;
+  --softball-red-700: #b92957;
+  --softball-red-900: #7d1639;
+  --softball-cream: #fffaf3;
+  --softball-navy-50: #edf5ff;
+  --softball-navy-200: #cfe2ff;
+  --softball-navy-500: #4f7bb1;
+  --softball-navy-800: #112d4d;
+  --softball-gold: #f4c767;
+  --softball-gold-deep: #d99e2a;
+  --ink-900: #1d2b45;
+  --ink-700: #3f506e;
+  --white: #ffffff;
+}
+
+body {
+  background: linear-gradient(180deg, var(--softball-cream) 0%, #f5f8ff 100%);
+  color: var(--ink-900);
+}
+
+.navbar {
+  background: linear-gradient(90deg, var(--softball-red-700) 0%, var(--softball-navy-800) 100%) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 12px 30px rgba(17, 45, 77, 0.18);
+}
+
+.navbar .nav-link,
+.navbar-brand {
+  color: var(--white) !important;
+  font-weight: 700;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+  color: var(--softball-gold) !important;
+}
+
+.quarto-title-block {
+  background: linear-gradient(135deg, rgba(185, 41, 87, 0.08), rgba(79, 123, 177, 0.12));
+  border: 1px solid rgba(17, 45, 77, 0.08);
+  border-radius: 18px;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+h1, h2, h3,
+.quarto-title-meta-heading,
+.title {
+  color: var(--softball-navy-800);
+}
+
+.card,
+.team-result,
+.stat-card,
+.player-war-panel {
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(17, 45, 77, 0.08);
+  box-shadow: 0 14px 28px rgba(17, 45, 77, 0.08);
+}
+
+.leaderboard-summary {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0 2rem;
+}
+
+.stat-card {
+  background: linear-gradient(180deg, #ffffff 0%, #eef7ff 100%);
+  border: 1px solid rgba(17, 45, 77, 0.08);
+  border-radius: 14px;
+  padding: 1rem 1.25rem;
+  box-shadow: 0 12px 24px rgba(17, 45, 77, 0.08);
+}
+
+.stat-card .label {
+  display: block;
+  color: var(--softball-navy-500);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.5rem;
+}
+
+.stat-card .value {
+  font-size: clamp(1.1rem, 1.8vw, 1.6rem);
+  font-weight: 700;
+  color: var(--softball-red-700);
+}
+
+.table, table,
+.reactable {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+thead {
+  background: linear-gradient(90deg, var(--softball-red-100), var(--softball-navy-200));
+}
+
+th {
+  color: var(--softball-navy-800) !important;
+}
+
+tr:nth-child(even) {
+  background: rgba(237, 245, 255, 0.75);
+}
+
+tr:hover {
+  background: rgba(185, 41, 87, 0.09);
+}
+
+.btn,
+.button {
+  background: linear-gradient(90deg, var(--softball-red-500), var(--softball-navy-500));
+  border: none;
+  color: var(--white);
+}
+
+p, li, td {
+  color: var(--ink-700);
+}
+
+::selection {
+  background: rgba(244, 199, 103, 0.35);
+}
+
+@media (max-width: 800px) {
+  .leaderboard-summary {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
